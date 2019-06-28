@@ -27,3 +27,4 @@ $(function addItem(){
      $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
         $(this).closest('li').remove();
      });
+ $(addItem);    
