@@ -6,7 +6,6 @@ function addItem() {
       listItem.push($("shopping-list-entry").closest("li"));
       });
   } 
-  $(addItem);
 //here is one for checking items
   function checkOff() {
     $('shopping-item-toggle').on('click', event => {
@@ -14,7 +13,6 @@ function addItem() {
       $('shopping-item').toggleClass('shopping-item__checked');
     });
   }
-  $(checkOff);
 //here is one for unchecking items
   function justKidding() {
     $('shopping-item-toggle').on('click', event => {
@@ -22,7 +20,6 @@ function addItem() {
       $('shopping-item').removeClass('shopping-item__checked');
     });
   }
-  $(justKidding);
 //here is one for removing items
   function begone() {
     $('shopping-item-delete').on('click', event => {
@@ -30,4 +27,11 @@ function addItem() {
       $('shopping-list-entry').remove("li");
     });
   }
-  $(begone);
+//call it maybe
+  function handleShoppingList() {
+    $(addItem);
+    $(checkOff);
+    $(justKidding);
+    $(begone);
+  }
+  (handleShoppingList);
