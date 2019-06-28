@@ -1,9 +1,9 @@
 //this is for adding an item
-$(function addItem(){
+$(function(){
     $('#js-shopping-list-form').submit(function(event) {
       event.preventDefault();
       const listItem = $('.js-shopping-list-entry').val();
-      $('#shopping-list-entry').val("");
+      $('#shopping-list-entry').text(listItem);
       $('.shopping-list').append(
         `<li>
           <span class="shopping-item">${listItem}</span>
