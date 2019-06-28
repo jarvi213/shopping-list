@@ -1,6 +1,6 @@
 //this is for adding an item
 $(function addItem(){
-    $('#js-shopping-list-form').submit(event => {
+    $('#js-shopping-list-form').submit(function(event) {
       event.preventDefault();
       const listItem = $('.js-shopping-list-entry').val();
       $('#shopping-list-entry').val("");
@@ -18,12 +18,12 @@ $(function addItem(){
         </li>`);
     });
 //this is for checking or unchecking an item
-     $('.shopping-list').on('click', '.shopping-item-toggle', event => {
+     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
       $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
      });
   
   });
 //this is for removing an item
-     $('.shopping-list').on('click', '.shopping-item-delete', event => {
+     $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
         $(this).closest('li').remove();
      });
